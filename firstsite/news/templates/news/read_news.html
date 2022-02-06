@@ -6,15 +6,17 @@
 <div class="card mb-3">
     <div class="card-header"> Категория: <a href="{{ item.category.get_absolute_url }}">{{item.category}}</a></div>
     <div class="card-body">
-
-                <div class="media">
-                        <img src="{{item.photo.url}}" align="left" alt="" width="350" height="235" line>
-
-                        <div class="media-body" style="margin-left: 360px;">
-                            <h5 class="card-title">{{item.title}}</h5>
-                            <p class="card-text">{{item.content}}</p>
-                        </div>
-                </div>
+        <div class="media">
+            {% if item.photo %}
+            <img src="{{item.photo.url}}" align="left" alt="" width="350" height="235" line>
+            {% else %}
+            <img src="/media/photos/2022/02/04/footer2_eMBPJwg.jpg" align="left" alt="" width="350" height="235" line>
+            {% endif %}
+            <div class="media-body" style="margin-left: 360px;">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-text">{{item.content|linebreaks}}</p>
+            </div>
+        </div>
     </div>
     <div class="card-footer text-muted">
         {{item.created_at|timesince }} ago
