@@ -6,10 +6,12 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('', index, name='home'),
-    path('category/<int:category_id>/', get_category, name='category'),
-    path('read_news/<int:news_id>/', read_news, name='read_news'),
-    path('add_news/', add_news, name='add_news'),
+    # path('', index, name='home'),
+    path('', HomeNews.as_view(), name='home'),
+    # path('category/<int:category_id>/', get_category, name='category'),
+    path('category/<int:category_id>/', NewsByCategory.as_view(), name='category'),
+    path('read_news/<int:pk>/', ReadNews.as_view(), name='read_news'),
+    path('add_news/', CreateNews.as_view(), name='add_news'),
 
 ]
 

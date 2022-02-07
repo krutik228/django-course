@@ -1,3 +1,15 @@
 body{
-    background-color: #fefefe;
+    background-color: #46211A;
+}
+
+#news_add{
+    color: WHITE;
+}
+
+.bg-light{
+    background-color: #e0e0e0 !important;
+}
+
+.list-group-item{
+    background-color: #e0e0e0;
 }
