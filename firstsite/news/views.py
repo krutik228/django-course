@@ -1,8 +1,10 @@
-from django.shortcuts import render, get_object_or_404, redirect
+# from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView, DetailView, CreateView
 
 from news.models import News, Category
 from .forms import NewsForm
+
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class HomeNews(ListView):
@@ -16,7 +18,7 @@ class HomeNews(ListView):
         return context
 
     def get_queryset(self):
-        return News.objects.filter(is_published=True)
+        return News.objects.filter(is_published=True).select_related('category')
 
 
 class NewsByCategory(ListView):
@@ -31,16 +33,20 @@ class NewsByCategory(ListView):
         return context
 
     def get_queryset(self):
-        return News.objects.filter(is_published=True, category=self.kwargs['category_id'])
+        return News.objects.filter(is_published=True, category=self.kwargs['category_id']).select_related('category')
+
 
 class ReadNews(DetailView):
     model = News
     template_name = 'news/read_news.html'
     context_object_name = 'news'
 
-class CreateNews(CreateView):
+
+class CreateNews(LoginRequiredMixin, CreateView):
     form_class = NewsForm
     template_name = 'news/add_news.html'
+    raise_exception = True
+
 
 # def index(request):
 #     news = News.objects.all()

@@ -1,5 +1,5 @@
 body{
-    background-color: #46211A;
+    background-color: #151515;
 }
 
 #news_add{
@@ -12,4 +12,8 @@ body{
 
 .list-group-item{
     background-color: #e0e0e0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.9);
 }

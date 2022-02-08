@@ -20,7 +20,7 @@ class News(models.Model):
     class Meta:
         verbose_name = "Новость"
         verbose_name_plural = "Новости"
-        ordering = ['created_at', 'title']
+        ordering = ['-created_at', 'title']
 
 
 class Category(models.Model):
