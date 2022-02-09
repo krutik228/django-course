@@ -21,8 +21,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 urlpatterns = [
+    path('', include('news.urls')),
     path('admin/', admin.site.urls),
-    path('news/', include('news.urls')),
 ]
 
 if settings.DEBUG:

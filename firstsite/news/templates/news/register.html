@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Добавление новости
+Регистрация
 {% endblock %}
 
 {% block content %}
-
-<div id="news_add">
-    <h1>Добавление новости</h1>
-
-    <form action="{% url 'add_news' %}" method="post">
+<div class="class" id="registration_form">
+    <h1>Регистрация</h1>
+    <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-
+        <button type="submit" class="btn btn-primary btn-block">Регистрация</button>
+    </form>
 </div>
+{% endblock %}

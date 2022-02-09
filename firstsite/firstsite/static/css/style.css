@@ -21,3 +21,24 @@ body{
 .navbar-light .navbar-text a, .navbar-light .navbar-text a:focus, .navbar-light .navbar-text a:hover{
     text-decoration: none;
 }
+
+#registration_form{
+    color: #fff;
+}
+
+ul.errorlist{
+    color:  #FF0000;
+}
+
+a#greeting{
+    color: #838383;
+}
+
+em#username{
+    color: BLACK;
+}
+
+.list-group-item.active{
+    background: #64625F;
+    border-color: #151515;
+}

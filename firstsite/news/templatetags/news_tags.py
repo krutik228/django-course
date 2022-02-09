@@ -12,7 +12,7 @@ def get_categories():
     return Category.objects.filter(news__is_published=True).distinct()
 
 
-@register.inclusion_tag('news/list_categories.html')
-def show_categories():
-    categories = Category.objects.all()
-    return {"categories:": categories}
+# @register.inclusion_tag('news/list_categories.html')
+# def show_categories():
+#     categories = Category.objects.all()
+#     return {"categories:": categories}
