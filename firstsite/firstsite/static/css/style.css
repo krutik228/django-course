@@ -11,7 +11,7 @@ body{
 }
 
 .bg-light{
-    background-color: #e0e0e0 !important;
+    background-color: rgba(224, 224, 224, 0.95) !important;
 }
 
 .list-group-item{
@@ -34,15 +34,14 @@ em#username{
     color: BLACK;
 }
 
+img#photo{
+    margin: 50px 10px 5px 0px;
+}
+
 .list-group-item.active{
     background: #64625F;
     border-color: #151515;
 }
-
-.row{
-    margin-top: 70px;
-}
-
 
 .navbar-light .navbar-nav .nav-link {
     color: rgba(0,0,0,.9);
@@ -52,21 +51,27 @@ em#username{
     text-decoration: none;
 }
 
-
-'''Фиксированный навбар'''
-.navbar{
+/* Фиксированный навбар*/
+.navbar {
+    background: #e0e0e0;
     position: fixed;
     top: 0;
     width: 100%;
-    margin-top: 30;
     z-index:200;
 }
+
+/* Фиксированные ссылки внутри навбара*/
 .navbar a {
     text-align: center;
     text-decoration: none;
 }
 
-'''Фиксированный сайдбар'''
+/* Положение страницы под навбаром*/
+.row{
+    margin-top: 70px;
+}
+
+/* Фиксированный сайдбар*/
 #sidebar{
     position: fixed;
     width: 17%;
