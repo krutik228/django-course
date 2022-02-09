@@ -17,3 +17,7 @@ body{
 .navbar-light .navbar-nav .nav-link {
     color: rgba(0,0,0,.9);
 }
+
+.navbar-light .navbar-text a, .navbar-light .navbar-text a:focus, .navbar-light .navbar-text a:hover{
+    text-decoration: none;
+}

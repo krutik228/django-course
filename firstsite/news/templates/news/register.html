@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добавление новости
+{% endblock %}
+
+{% block content %}
+
+<div id="news_add">
+    <h1>Добавление новости</h1>
+
+    <form action="{% url 'add_news' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+</div>

@@ -13,6 +13,7 @@ class NewsAdmin(admin.ModelAdmin):
     fields = ('title', 'category', 'content', 'photo', 'get_photo', 'created_at', 'updated_at', 'is_published')
     readonly_fields = ('get_photo', 'created_at', 'updated_at')
     save_on_top = True
+    list_select_related = ('category',)
 
     def get_photo(self, obj):
         if obj.photo:

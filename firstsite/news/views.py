@@ -1,4 +1,4 @@
-# from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView, DetailView, CreateView
 
 from news.models import News, Category
@@ -7,11 +7,19 @@ from .forms import NewsForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
+def register(request):
+    return render(request, 'news/register.html')
+
+
+def login(request):
+    return render(request, 'news/login.html')
+
+
 class HomeNews(ListView):
     model = News
     context_object_name = 'news'
     template_name = 'news/home_news_list.html'
-    paginate_by = 3
+    paginate_by = 5
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -27,6 +35,7 @@ class NewsByCategory(ListView):
     context_object_name = 'news'
     template_name = 'news/news_by_category.html'
     allow_empty = False
+    paginate_by = 5
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
