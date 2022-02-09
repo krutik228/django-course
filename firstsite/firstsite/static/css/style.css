@@ -1,9 +1,13 @@
+BACKGROUND_BODY_DARK = #151515;
+BACKGROUND_BODY_LIGHT = #E8E8E8;
+BACKGROUND_BODY_LIGHT2 = #f4f4f4;
+
 body{
-    background-color: #151515;
+    background-color: #f4f4f4;
 }
 
 #news_add{
-    color: WHITE;
+    color: BLACK;
 }
 
 .bg-light{
@@ -14,16 +18,8 @@ body{
     background-color: #e0e0e0;
 }
 
-.navbar-light .navbar-nav .nav-link {
-    color: rgba(0,0,0,.9);
-}
-
-.navbar-light .navbar-text a, .navbar-light .navbar-text a:focus, .navbar-light .navbar-text a:hover{
-    text-decoration: none;
-}
-
 #registration_form{
-    color: #fff;
+    color: BLACK;
 }
 
 ul.errorlist{
@@ -41,4 +37,37 @@ em#username{
 .list-group-item.active{
     background: #64625F;
     border-color: #151515;
+}
+
+.row{
+    margin-top: 70px;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.9);
+}
+
+.navbar-light .navbar-text a, .navbar-light .navbar-text a:focus, .navbar-light .navbar-text a:hover{
+    text-decoration: none;
+}
+
+
+'''Фиксированный навбар'''
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-top: 30;
+    z-index:200;
+}
+.navbar a {
+    text-align: center;
+    text-decoration: none;
+}
+
+'''Фиксированный сайдбар'''
+#sidebar{
+    position: fixed;
+    width: 17%;
 }

@@ -1,5 +1,5 @@
 {% load news_tags %}
-<div class="list-group">
+<div class="list-group" id="sidebar">
     {% get_categories as categories %}
     {% for item in categories %}
     {% if title == item.title %}
