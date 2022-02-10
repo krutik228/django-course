@@ -1,54 +1,74 @@
+/*
 BACKGROUND_BODY_DARK = #151515;
 BACKGROUND_BODY_LIGHT = #E8E8E8;
 BACKGROUND_BODY_LIGHT2 = #f4f4f4;
+*/
+
 
 body{
     background-color: #f4f4f4;
 }
 
+/* Форма добавления новости  */
 #news_add{
     color: BLACK;
 }
 
-.bg-light{
-    background-color: rgba(224, 224, 224, 0.95) !important;
-}
-
-.list-group-item{
-    background-color: #e0e0e0;
-}
-
+/* Форма регистрации  */
 #registration_form{
     color: BLACK;
 }
 
+/* Списк возникающих ошибок при регистрации или авторизации  */
 ul.errorlist{
     color:  #FF0000;
 }
 
+/* Приветствие пользователя после авторизации в навбаре  */
 a#greeting{
     color: #838383;
 }
 
+/* Имя пользователя после авторизации в навбаре */
 em#username{
     color: BLACK;
 }
 
+/* Картинка новости в режиме чтения новости */
 img#photo{
     margin: 50px 10px 5px 0px;
 }
 
+/* Сайдбар бэкграунд */
+.list-group-item{
+    background-color: #e0e0e0;
+}
+
+/* Текущая категория в сайдбаре */
 .list-group-item.active{
     background: #64625F;
     border-color: #151515;
 }
 
+/* Фиксированный сайдбар*/
+#sidebar{
+    position: fixed;
+    width: 17%;
+}
+
+/* Ссылка "Главная" в навбаре */
 .navbar-light .navbar-nav .nav-link {
     color: rgba(0,0,0,.9);
 }
 
+/* "Регистрация" и "Вход" в навбаре */
 .navbar-light .navbar-text a, .navbar-light .navbar-text a:focus, .navbar-light .navbar-text a:hover{
     text-decoration: none;
+}
+
+/* Навбар цвет бэкграунда */
+.bg-light{
+    background-color: rgba(224, 224, 224, 0.95) !important;
 }
 
 /* Фиксированный навбар*/
@@ -71,8 +91,4 @@ img#photo{
     margin-top: 70px;
 }
 
-/* Фиксированный сайдбар*/
-#sidebar{
-    position: fixed;
-    width: 17%;
-}
+

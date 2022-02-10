@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-{{ news.id }}
+{{ news.title }}
 {% endblock %}
 
 {% block content %}
@@ -10,9 +10,9 @@
     <div class="card-body">
         <div class="media">
             {% if news.photo %}
-            <img src="{{ news.photo.url }}" align="left" id="photo" alt="" width="350" height="235" line>
+            <img src="{{ news.photo.url }}" align="left" id="photo" alt="" width="350">
             {% else %}
-            <img src="/media/photos/2022/02/04/footer2_eMBPJwg.jpg" align="left" id="photo_default" alt="" width="350" height="235" line>
+            <img src="/media/photos/2022/02/04/footer2_eMBPJwg.jpg" align="left" id="photo_default" alt="" width="350">
             {% endif %}
             <div class="media-body">
                 <h5 class="card-title" align="center">{{ news.title }}</h5>
